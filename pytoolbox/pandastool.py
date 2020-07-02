@@ -1,5 +1,12 @@
 import pandas as pd
 import numpy as np
+
+################################################################################
+# How to use this module, e.g.,
+#   from pytoolbox import pandastool
+#   pandastool.make_df_from_list (list_, col_name) 
+################################################################################
+
 # find the max value for each row and return the original df with an added col for the row.
 def find_max_each_row(df, max_col_name = 'max_val'):
     df[max_col_name] = df.max(axis=1)
@@ -21,4 +28,12 @@ def make_df_from_list (list_, col_name):
 
     df = pd.DataFrame.from_records(list_, columns=col_name)
 
+    return df
+
+
+#===============================================================================
+# Combine two df's by column, equivalent to cbind of R 
+#===============================================================================
+def cbind_two_df (df_a, df_b):
+    df = pd.concat ([df_a, df_b], axis=1)
     return df
