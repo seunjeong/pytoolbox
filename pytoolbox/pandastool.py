@@ -8,16 +8,17 @@ def find_max_each_row(df, max_col_name = 'max_val'):
     
 #df = pd.DataFrame(np.random.randn(5, 3), columns = ['x', 'y', 'z'], index=['a', 'c', 'e', 'f', 'h'])
 
-def two_list_to_dic(key_list, value_list):
-    """
-    @example: 
-    key_list = ['a', 'b', 'c']
-    value_list = range (3)
-    foo = two_list_to_dic (key_list, value_list)
-    """
-    zipped = zip(key_list, value_list)
-    
-    # Create a dictionary from zip object
-    dict_obj = dict(zipped)
 
-    return dict_obj
+def make_df_from_list (list_, col_name):
+    """
+    @param:
+        # example
+        list_ = [('Jones LLC', 150, 200, 50),
+                 ('Alpha Co', 200, 210, 90),
+                ('Blue Inc', 140, 215, 95)]
+        col_name = ['account', 'Jan', 'Feb', 'Mar']
+    """
+
+    df = pd.DataFrame.from_records(list_, columns=col_name)
+
+    return df
