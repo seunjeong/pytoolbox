@@ -3,6 +3,6 @@
 Various tools for data analysis in Python.
 
 ## Installation
-pip install git+https://github.com/seunjeong/pytoolbox
+pip install git+https://github.com/seunjeong/pytoolbox#egg=pytoolbox
 
 To run without errors, it is recommended to activate a conda environment, e.g., `source activate py37`
