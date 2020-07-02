@@ -37,3 +37,15 @@ def make_df_from_list (list_, col_name):
 def cbind_two_df (df_a, df_b):
     df = pd.concat ([df_a, df_b], axis=1)
     return df
+
+
+#===============================================================================
+# Combine two df's by row, equivalent to rbind of R 
+#===============================================================================
+def rbind_two_df (df_a, df_b):
+    df = pd.concat ([df_a, df_b], axis=0)
+    return df
+
+#col_name = ['account', 'Jan', 'Feb', 'Mar']
+#list_ = [('Jones LLC', 150, 200, 50), ('Alpha Co', 200, 210, 90), ('Blue Inc', 140, 215, 95)]
+#dff = pandastool.make_df_from_list (list_, col_name)
