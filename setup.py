@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='pytoolbox',
-    version='0.0.1',
+    version='0.0.2',
     description='Some useful functions for Python data analysis',
     url='https://github.com/seunjeong/pytoolbox.git',
     author='Seongeun Jeong',
